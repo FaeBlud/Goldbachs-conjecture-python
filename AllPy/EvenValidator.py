@@ -1,6 +1,6 @@
 input_filename = 'primenumbers.txt'
 output_filename = 'primefinished.txt'
-start_number = 0
+start_number = 8
 increment = 2
 
 
