@@ -1,16 +1,13 @@
 upper = 999999999999999999999999999999999999999999999
+filename = "primenumbers.txt"
 
-f = open("primenumbers.txt", "w")
-
-
-for num in range(0, upper):
-   if num > 1:
-       for i in range(2, num):
-           if (num % i) == 0:
-               break
-       else:
-           print(num)
-           numfin = str(num)
-           f.write(numfin + "\n")
-
-f.close()
+with open(filename, "w") as f:
+    for num in range(2, upper):
+        is_prime = True
+        for i in range(2, int(num ** 0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(num)
+            f.write(str(num) + "\n")
