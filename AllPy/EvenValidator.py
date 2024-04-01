@@ -12,13 +12,13 @@ try:
             found = False
             for prime in numbers_set:
                 if (target_number - prime) in numbers_set:
-                    result = f"Found: {prime} + {target_number - prime} = {target_number}"
+                    result = f"F: {target_number} = {prime} + {target_number - prime}"
                     print(result)
                     output_file.write(result + "\n")
                     found = True
                     break
             if not found:
-                result = f"No two prime numbers sum up to {target_number}"
+                result = f"No: {target_number}"
                 print(result)
                 output_file.write(result + "\n")
 except FileNotFoundError:
